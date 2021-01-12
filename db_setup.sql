@@ -72,3 +72,12 @@ CREATE TABLE flight_details (
 
 \copy weather FROM 'WeatherEvents_2016-2019.csv' CSV HEADER;
 \copy flight_details FROM PROGRAM 'awk FNR-1 2019-flights/* | cat' CSV HEADER;
+
+
+
+/*Add column for more commonly used airport code*/
+
+ALTER TABLE weather
+ADD airport_clean varchar(4);
+
+UPDATE weather SET airport_clean = RIGHT(airport, LENGTH(airport) - 1);
