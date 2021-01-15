@@ -22,7 +22,6 @@ CREATE TABLE weather (
 );
 
 
-
 CREATE TABLE flight_details (
      day_of_week integer,
      flight_date date NOT NULL,
@@ -70,9 +69,24 @@ CREATE TABLE flight_details (
 );
 
 
+CREATE TABLE airlines(
+    ID varchar(10) NOT NULL,
+    name text,
+    PRIMARY KEY (ID)
+);
+
+
+CREATE TABLE weekdays(
+    code integer,
+    name varchar(9),
+    PRIMARY KEY (code)
+);
+
+
 \copy weather FROM 'WeatherEvents_2016-2019.csv' CSV HEADER;
 \copy flight_details FROM PROGRAM 'awk FNR-1 2019-flights/* | cat' CSV HEADER;
-
+\copy airlines FROM 'L_UNIQUE_CARRIERS.csv' CSV HEADER;
+\copy weekdays FROM 'L_WEEKDAYS.csv' CSV HEADER;
 
 
 /*Add column for more commonly used airport code*/
