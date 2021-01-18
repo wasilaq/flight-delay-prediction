@@ -56,6 +56,7 @@ pytz @ file:///tmp/build/80754af9/pytz_1608922264688/work
 pyzmq==20.0.0
 scikit-learn==0.24.0
 scipy==1.6.0
+seaborn==0.11.1
 Send2Trash==1.5.0
 six @ file:///opt/concourse/worker/volumes/live/5b31cb27-1e37-4ca5-6e9f-86246eb206d2/volume/six_1605205320872/work
 sklearn==0.0
