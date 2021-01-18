@@ -1,6 +1,6 @@
 # FlightDelayPrediction
 
-The final presentation for this project is a Tableau story and can be found [here](https://public.tableau.com/profile/wasila.q.#!/vizhome/ArrivalDelaysFomATL/ArrivalDelays).
+Project to build a classifier predicting whether or not a flight's arrival will be delayed significantly (i.e. by more than 15 minutes).
 
 **Data Sources:**
 
